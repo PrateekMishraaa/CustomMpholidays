@@ -22,6 +22,7 @@ import HolidayFour from "../assets/holiday4.jpg";
 import HolidayFive from "../assets/holiday5.jpg";
 import HolidaySix from "../assets/holiday6.jpg";
 import HolidaySeven from "../assets/holiday7.jpg";
+import Footer from '../Components/Footer';
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -232,6 +233,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };
