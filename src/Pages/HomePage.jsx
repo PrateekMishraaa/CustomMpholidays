@@ -14,7 +14,6 @@ import SixthItn from "../assets/itenenaries6.jpg";
 import SeventhItn from "../assets/itenenaries7.jpg";
 import EightItn from "../assets/itenenaries8.jpg";
 import NinethItn from "../assets/itenenaries9.jpg";
-
 import HolidayOne from "../assets/holiday1.jpg";
 import HolidayTwo from "../assets/holiday2.jpg";
 import HolidayThree from "../assets/holiday3.jpg";
@@ -25,9 +24,12 @@ import HolidaySeven from "../assets/holiday7.jpg";
 import Footer from '../Components/Footer';
 
 const HomePage = () => {
+
   const [loading, setLoading] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const scrollRef = useRef(null);
+
+
 
   const itineraries = [
     { image: FirstItn, description: "Explore the serene charm of Madhya Pradesh, where culture and nature unite beautifully." },
