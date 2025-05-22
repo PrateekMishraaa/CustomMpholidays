@@ -89,8 +89,9 @@ const Footer = () => {
             <img src={ImageFour} alt="Attraction 4" className='w-full h-24 object-cover rounded-sm' />
           </div>
         </div>
-
+            {/* <div className='h-20 w-full bg-green-900'></div> */}
       </div>
+     
     </footer>
   );
 }

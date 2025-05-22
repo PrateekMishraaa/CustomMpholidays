@@ -2,6 +2,7 @@ import React from 'react';
 import { FaSquareFacebook, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import Logo from "../assets/logo.png";
+import { href } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -21,9 +22,13 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <ul className="flex flex-wrap justify-center md:justify-end gap-3 md:gap-5 font-semibold text-sm text-center">
-            {["Home", "About", "About Madhya Pradesh", "Blog", "Gallery", "Vehicle", "Contact Us"].map((item, idx) => (
-              <li key={idx}><a href="#">{item}</a></li>
-            ))}
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/about-mp">About Madhya Pradesh</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Gallery</a></li>
+          <li><a href="">Vehicle</a></li>
+          <li><a href="">Contact</a></li>
           </ul>
         </div>
       </nav>
