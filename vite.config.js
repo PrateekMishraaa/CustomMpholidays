@@ -4,9 +4,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  plugins: [
-  require('tailwind-scrollbar-hide')
-],
+
 
   extend: {
   // ...
