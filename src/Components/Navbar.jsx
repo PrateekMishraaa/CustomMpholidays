@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaSquareFacebook, FaXTwitter, FaInstagram } from "react-icons/fa6";
-import { FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa";
+import { FaLinkedinIn, FaBars, FaTimes,FaPinterest } from "react-icons/fa";
 import Logo from "../assets/logo.png";
 import Form from '../Components/Form';
 
@@ -18,10 +18,10 @@ const Navbar = () => {
       <nav className="bg-white border-b w-full">
         <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-20 py-2 gap-2">
           <div className="flex flex-wrap items-center gap-4 text-sm justify-center md:justify-start">
-            <a href="#"><FaSquareFacebook /></a>
-            <a href="#"><FaXTwitter /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaLinkedinIn /></a>
+            <a href="https://www.facebook.com/MPHOLIDAYSPVTLTD/"><FaSquareFacebook /></a>
+            <a href="https://x.com/MPHolidays1/status/1920728689081290810"><FaXTwitter /></a>
+            <a href="https://www.instagram.com/mpholidayspvtltd/"><FaInstagram /></a>
+            <a href="https://in.pinterest.com/mpholidaysofficial/"><FaPinterest /></a>
             <a href="tel:9319184060" className="font-semibold">9319184060</a>
             <a href="mailto:welcome@mpholidays.in" className="font-semibold">welcome@mpholidays.in</a>
           </div>

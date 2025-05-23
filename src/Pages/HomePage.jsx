@@ -22,7 +22,13 @@ import HolidayFive from "../assets/holiday5.jpg";
 import HolidaySix from "../assets/holiday6.jpg";
 import HolidaySeven from "../assets/holiday7.jpg";
 import Footer from '../Components/Footer';
-
+import UjjainOne from "../assets/ujjain1.jpg"
+import UjjainTwo from "../assets/ujjain2.jpg"
+import UjjainThree from "../assets/ujjain3.jpg"
+import OmkareshwarOne from "../assets/omkareshwar.jpg"
+import OmkareshwarTwo from "../assets/omkareshwar2.jpg"
+import OmkareshwarThree from "../assets/omkareshwar3.jpg"
+import OmkareshwarFour from "../assets/omkareshwar4.jpg"
 const HomePage = () => {
 
   const [loading, setLoading] = useState(true);
@@ -94,7 +100,50 @@ const HomePage = () => {
       inclusion: "Hotel Accommodation, Private Transport, Private Sightseeing & Excursion, Specified Meals"
     },
   ];
-
+    const hotels =[
+     {
+      image:UjjainOne,
+      title:"Rudraksh Club & Resort",
+      details:"Experience luxary and serenity at Rudraksh Hotel & Club Resort in Indore. Indulge in exquisite accommodations,delectable cuisine,and rejuvenating amenities amidst picturesque surroudings",
+      ratings:"4.5"
+     },
+     {
+      image:UjjainTwo,
+      title:"MPT Shipra Residency",
+      details:"Experience luxary and serenity at Rudraksh Hotel & Club Resort in Indore. Indulge in exquisite accommodations,delectable cuisine,and rejuvenating amenities amidst picturesque surroudings",
+      ratings:"4.9"
+     },
+     {
+      image:UjjainThree,
+      title:"MPT Ujjaini",
+      details:"Discover comfort and hospitality at MPT Shipra Residency. Nestled in the heart of Indore, enjoy modern amenities, delectable dining, and warm service in a serene atmosphere",
+      ratings:"4.0"
+     },
+        {
+      image:OmkareshwarOne,
+      title:"MPT Temple View",
+      details:"A tranquil retreat overlooking ancient marvels, offering serenity, comfort, and a glimpse into India's rich cultural heritage.",
+      ratings:"4.5"
+     },
+     {
+      image:OmkareshwarTwo,
+      title:"MPT Sailani Resort",
+      details:"An idyllic haven nestled amidst nature's beauty, offering tranquility, comfort, and memorable experiences for every guest.",
+      ratings:"4.9"
+     },
+     {
+      image:OmkareshwarThree,
+      title:"Vanasthali Resort",
+      details:"A sanctuary amidst divine landscapes, where serenity meets spirituality, offering rejuvenation and blissful experiences.",
+      ratings:"4.0"
+     },
+      {
+      image:OmkareshwarFour,
+      title:"Narmada Hills Resort",
+      details:"A tranquil haven atop scenic hills, offering panoramic views, serenity, and spiritual rejuvenation in nature's embrace",
+      ratings:"4.0"
+     },
+    ]
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
@@ -154,6 +203,7 @@ const HomePage = () => {
               <RxCross2 />
             </button>
             <h2 className="text-xl font-semibold mb-4 text-center text-green-800">Welcome to MP-Holidays!</h2>
+
             <div className="w-full aspect-video mb-4 rounded-md overflow-hidden">
               <video src={Video} className="w-full h-full object-cover" controls autoPlay />
             </div>
@@ -214,8 +264,8 @@ const HomePage = () => {
       <section className="w-full py-10 bg-white">
         <div className="w-[90%] mx-auto">
           <div className='flex justify-between p-10 h-20 w-full mb-10'>
-            <p className="text-3xl font-semibold text-gray-800 ">Tours & Holidays</p>
-            <a href="" className='h-10 text-2xl font-sans text-green-700 w-40 '>See All<FaArrowTrendUp className='relative left-20 cursor-pointer bottom-6' /></a>
+            <p className="text-3xl font-semibold text-gray-800 ">Tours & Packages</p>
+            <a href="/view-all" className='h-10 text-2xl font-sans text-green-700 w-40 '>See All<FaArrowTrendUp className='relative left-20 cursor-pointer bottom-6' /></a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {toursHolidays.map((item, index) => (
@@ -229,13 +279,54 @@ const HomePage = () => {
                   <p className="text-sm text-gray-600 mb-2">{item.duration}</p>
                   <p className="text-sm text-gray-700 mb-2">{item.description}</p>
                   <p className="text-xs text-gray-500">Inclusions: {item.inclusion}</p>
+                  <a
+                    href="/view-all"
+                    className="inline-block mt-4 px-4 py-2 text-sm text-green-800 border-2 border-green-800 rounded-lg hover:bg-green-800 hover:text-white transition duration-300"
+                  >
+                    View All
+                  </a>
+
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <Footer/>
+       <section className="w-full py-10 bg-white">
+        <div className="w-[90%] mx-auto">
+          <div className='flex justify-between p-10 h-20 w-full mb-10'>
+            <p className="text-3xl font-semibold text-gray-800 ">Best Selling Hotels</p>
+            <a href="/all-hotels" className='h-10 text-2xl font-sans text-green-700 w-40 '>See All<FaArrowTrendUp className='relative left-20 cursor-pointer bottom-6' /></a>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {hotels.map((item, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden shadow-md"
+              >
+                <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold text-green-800 mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600 mb-2">{item.details}</p>
+                  <p className="text-sm text-gray-700 mb-2">
+  Ratings: <span className="font-medium text-yellow-500">{item.ratings} ★★★★★</span>
+</p>
+
+                  
+                  <a
+                    href="/view-all"
+                    className="inline-block mt-4 px-4 py-2 text-sm text-green-800 border-2 border-green-800 rounded-lg hover:bg-green-800 hover:text-white transition duration-300"
+                  >
+                    View All
+                  </a>
+
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <Footer />
     </>
   );
 };

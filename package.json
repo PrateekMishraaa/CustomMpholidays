@@ -19,6 +19,7 @@
     "react-multi-carousel": "^2.8.6",
     "react-router-dom": "^7.6.0",
     "react-svg-worldmap": "^2.0.0-alpha.16",
+    "react-toastify": "^11.0.5",
     "styled-components": "^6.1.18",
     "tailwind-scrollbar-hide": "^2.0.0",
     "tailwindcss": "^4.1.7"
