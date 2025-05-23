@@ -314,7 +314,7 @@ const HomePage = () => {
 
                   
                   <a
-                    href="/view-all"
+                    href="/all-hotels"
                     className="inline-block mt-4 px-4 py-2 text-sm text-green-800 border-2 border-green-800 rounded-lg hover:bg-green-800 hover:text-white transition duration-300"
                   >
                     View All
