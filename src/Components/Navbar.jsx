@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaSquareFacebook, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn, FaBars, FaTimes,FaPinterest } from "react-icons/fa";
-import Logo from "../assets/headlogo.png";
+import Logo from "../assets/circle-logo.png";
 import Form from '../Components/Form';
 
 const Navbar = () => {
